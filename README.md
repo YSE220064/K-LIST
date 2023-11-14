@@ -4,4 +4,4 @@
     </a>
 </p>
 
-<p align="center">K-List</p>
+<p align="center">K-List http://k-list.free.nf/</p>
