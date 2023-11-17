@@ -1,15 +1,9 @@
-<!-- index.php -->
+<!-- userregistration.php -->
 <!DOCTYPE html>
 <html lang="en jp">
-
-<?php include 'head.php'; ?>
-
+<?php include '../WebComponents/head.php'; ?>
 <body>
-
-    <?php include 'navigation.php'; ?>  
-
-    <br>
-
+    <?php include '../WebComponents/navigation.php'; ?>  
     <div class="container">
     <form id="registrationForm" action="./userregistrationcall.php" method="post">
     <h1>K-List</h1>
@@ -27,12 +21,9 @@
       <button type="submit">登録</button>
     </form>
     </div>
+    <?php include '../WebComponents/footer.php'; ?>
 
-    <br>
-
-    <?php include 'footer.php'; ?>
-
-    <script src="./scripts.js"></script>
+    <script src="../WebScripts/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
 
 </body>
