@@ -21,7 +21,8 @@
             
             <p align="center">
             <button onclick="saveList()">リスト　ダウンロード</button>
-            <!-- <button id="copy-button" onclick="copyLink()">リストのリンクをコピー</button> -->
+            <br>
+            <button id="copy-button" onclick="copyLink()">リスト　リンク　コピー</button>
             <br>
             <button onclick="copyLinkAndGenerateQRCode()">QR　コード　作成</button>
             <!-- <button onclick="savetodb()">データーベースに保存</button> -->
