@@ -83,11 +83,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
 <!DOCTYPE html>
 <html lang="en jp">
 
-<?php include 'head.php'; ?>
+<?php include '../WebComponents/head.php'; ?>
 
 <body>
 
-    <?php include 'navigation.php'; ?>  
+    <?php include '../WebComponents/navigation.php'; ?>  
 
     <br>
 
@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
 
     <br>
 
-    <?php include 'footer.php'; ?>
+    <?php include '../WebComponents/footer.php'; ?>
 
     <script>
         function displayLists() {
