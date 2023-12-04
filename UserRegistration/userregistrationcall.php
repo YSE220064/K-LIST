@@ -20,7 +20,10 @@ $email = $_POST['email'];
 $sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$password', '$email')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Registration successful";
+    $_SESSION['user'] = $row;
+        //echo "Login successful";
+        header('Location: ../OkaimonoMake/okaimono.php');
+        exit;
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

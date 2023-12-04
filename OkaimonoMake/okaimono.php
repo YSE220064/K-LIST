@@ -1,3 +1,8 @@
+<?php
+require_once('../WebComponents/functions.php');
+loginCheck();
+?>
+
 <!-- okaimono.php -->
 <!DOCTYPE html>
 <html lang="en jp">

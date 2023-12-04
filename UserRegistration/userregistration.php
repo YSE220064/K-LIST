@@ -24,7 +24,6 @@
     <?php include '../WebComponents/footer.php'; ?>
 
     <script src="../WebScripts/scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
 
 </body>
 

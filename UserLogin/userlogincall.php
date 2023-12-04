@@ -23,14 +23,22 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
+    $conn->close();
     if (password_verify($password, $row['password'])) {
-        echo "Login successful";
+        $_SESSION['user'] = $row;
+        //echo "Login successful";
+        header('Location: ../OkaimonoMake/okaimono.php');
+        exit;
     } else {
-        echo "Incorrect password";
+        //echo "Incorrect password";
+        header('Location: ./userLogin.php');
+        exit;
     }
 } else {
     echo "User not found";
 }
 
-$conn->close();
+
+// var_dump($_SESSION['user']);
+
 ?>
