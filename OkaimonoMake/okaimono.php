@@ -11,7 +11,7 @@ loginCheck();
     <?php include '../WebComponents/navigation.php'; ?>  
     <div class="container">
         <div id="shopping-list">
-            <h2 id="list-title">お買い物リストの名は？</h2>
+            <h2 id="list-title">何リストを作りたいの？</h2>
             <label for="list-name">リスト名；</label>
             <input type="text" id="list-name" placeholder="リスト名を記入してね！">
             <button onclick="changeListName()">変更</button>
@@ -30,7 +30,7 @@ loginCheck();
             <button id="copy-button" onclick="copyLink()">リスト　リンク　コピー</button>
             <br>
             <button onclick="copyLinkAndGenerateQRCode()">QR　コード　作成</button>
-            <button onclick="savetodb()">データーベースに保存</button>
+            <button onclick="savetodb()">データーベース　保存</button>
             </p>
 
         </div>

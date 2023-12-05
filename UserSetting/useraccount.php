@@ -1,23 +1,23 @@
-<!-- index.php -->
+<!-- useraccount.php -->
 <!DOCTYPE html>
 <html lang="en jp">
 
-<?php include 'head.php'; ?>
+<?php include '../WebComponents/head.php'; ?>
 
 <body>
 
-    <?php include 'navigation.php'; ?>  
+    <?php include '../WebComponents/navigation.php'; ?>  
 
     <br>
 
-    UserAdmin
-
+    <div class="container">
+        <h1>アカウント管理
+            <br>未定
+        </h1>
+    </div>
     <br>
 
-    <?php include 'footer.php'; ?>
-
-    <script src="./scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+    <?php include '../WebComponents/footer.php'; ?>
 
 </body>
 

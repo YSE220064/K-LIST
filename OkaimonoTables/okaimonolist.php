@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
     <br>
 
     <div class="container">
-        <h2>お買い物リストの一覧</h2>
+        <h2>リストの一覧</h2>
         <table id="lists-table" border="1"></table>
     </div>
 
@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
             table.innerHTML = "";
 
             var headerRow = table.insertRow(0);
-            var headers = ["ID", "List Name", "List Content", "Creation DateTime", "Actions"];
+            var headers = ["号", "名", "中身", "いつ", "何を"];
             for (var i = 0; i < headers.length; i++) {
                 var cell = headerRow.insertCell(i);
                 cell.innerHTML = headers[i];
@@ -135,8 +135,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
                 row.insertCell(2).innerHTML = lists[i].list_content;
                 row.insertCell(3).innerHTML = lists[i].creation_datetime;
                 var actionsCell = row.insertCell(4);
-                actionsCell.innerHTML = '<button onclick="editList(' + lists[i].id + ', \'' + lists[i].list_name + '\', \'' + lists[i].list_content + '\')">Edit</button> ' +
-                    '<button onclick="deleteList(' + lists[i].id + ')">Delete</button>';
+                actionsCell.innerHTML = '<button onclick="editList(' + lists[i].id + ', \'' + lists[i].list_name + '\', \'' + lists[i].list_content + '\')">修正</button> ' +
+                    '<button onclick="deleteList(' + lists[i].id + ')">削除</button>';
             }
         }
 

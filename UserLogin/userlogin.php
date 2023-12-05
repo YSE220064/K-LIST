@@ -27,10 +27,7 @@
 
     <br>
 
-    <?php include 'footer.php'; ?>
-
-    <script src="./scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+    <?php include '../WebComponents/footer.php'; ?>
 
 </body>
 
