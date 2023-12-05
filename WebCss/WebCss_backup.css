@@ -48,37 +48,37 @@ body {
 }
 
 .topnav a:nth-child(1) {
-    background-color: #545E75;
-    color: white;
+    background-color: #FF0000;
+    color: black;
 }
 
 .topnav a:nth-child(2) {
-    background-color: #63adf2;
-    color: white;
+    background-color: #FFFF00;
+    color: black;
 }
 
 .topnav a:nth-child(3) {
-    background-color: #A7CCED;
-    color: white;
+    background-color: #00FF00;
+    color: black;
 }
 
 .topnav a:nth-child(4) {
-    background-color: #6c8dad;
+    background-color: #0000FF;
     color: white;
 }
 
 .topnav a:nth-child(5) {
-    background-color: #4E6D8D;
+    background-color: violet;
     color: white;
 }
 
 .topnav a:nth-child(6) {
-    background-color: #304d6d;
+    background-color: grey;
     color: white;
 }
 
 .topnav a:nth-child(7) {
-    background-color: #82A0BC;
+    background-color: darkgoldenrod;
     color: white;
 }
 
