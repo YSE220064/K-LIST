@@ -22,7 +22,7 @@
       <label for="password">パスワード ;</label>
       <input type="password" id="password" name="password" required>
       <br>
-      <input type="submit" value="ログイン" class="button">
+      <button type="submit">ログイン</button>
     </form>
     </div>
 
