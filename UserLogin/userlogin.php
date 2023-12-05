@@ -1,12 +1,12 @@
-<!-- index.php -->
+<!-- userlogin.php -->
 <!DOCTYPE html>
 <html lang="en jp">
 
-<?php include 'head.php'; ?>
+<?php include '../WebComponents/head.php'; ?>
 
 <body>
 
-    <?php include 'navigation.php'; ?>  
+    <?php include '../WebComponets/navigation.php'; ?>  
 
     <br>
 
