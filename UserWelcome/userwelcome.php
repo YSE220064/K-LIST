@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en jp">
 <?php include "../WebComponents/head.php"; ?>
-<!-- <link rel="stylesheet" href="/WebCss/WebCss.css"> -->
 <body>
     <?php include '../WebComponents/navigation.php'; ?>  
     <div class="container">
@@ -12,19 +11,19 @@
         <h1 class="home_title">K-List</h1>
         <h3 class="home_subtitle">お買い物リスト</h3>
       
-        <!-- <div class="user_registration">
-        <a href="./userregistration.php">
+        <div class="user_registration">
+        <a href="../UserRegistration/userregistration.php">
           <button type="submit">アカウント　作成</button></a>
       </div>
       
       <div class="user_login">
-        <a href="./userlogin.php">
+        <a href="../UserLogin/userlogin.php">
           <button type="submit">アカウント　ログイン</button></a>
-      </div> -->
+      </div>
 
       <div class="okaimono_make">
         <a href="../OkaimonoMake/okaimono.php">
-          <button type="submit">リストを作る</button></a>
+          <button type="submit">リスト　作る</button></a>
       </div>
       
     </div>

@@ -6,7 +6,7 @@
 
 <body>
 
-    <?php include '../WebComponets/navigation.php'; ?>  
+    <?php include '../WebComponents/navigation.php'; ?>  
 
     <br>
 
