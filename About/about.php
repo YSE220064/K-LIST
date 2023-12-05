@@ -15,7 +15,7 @@
     </header>
 
     <section>
-        <h2>K-List 概要</h2>
+        <h2>概要</h2>
 
         <p>K-List　(ケーリスト)　は、我々 GG IZY TEAM　(ジージーイージーチーム)　が卒業制作発表作品として開発した買い物リスト共有WEBアプリです。</p>
     </section>

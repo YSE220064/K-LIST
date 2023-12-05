@@ -14,7 +14,7 @@
         <div class="user_registration">
         <!-- <a href="../UserRegistration/userregistration.php" >
           <button type="submit">アカウント　作成</button></a> -->
-          <a href="../UserRegistration/userregistration.php" class="btn btn-flat"><span>アカウント　作成</span></a>
+          <a href="../UserRegistration/userregistration.php" class="btn btn-flat"><span>アカウント　登録</span></a>
       </div><br>
       
       <div class="user_login">
@@ -30,7 +30,7 @@
       </div><br> -->
 
       <div class="okaimono_make">
-        <a href="../OkaimonoMake/okaimono.php" class="btn btn-flat"><span>リストを作る</span></a>
+        <a href="../OkaimonoMake/okaimono.php" class="btn btn-flat"><span>リスト　作る</span></a>
       </div>
       
     </div>
