@@ -12,8 +12,9 @@
 
     <div class="container">
     <form id="loginForm" action="./userlogincall.php" method="post">
-    <h1>K-List</h1>
-      <h2>アカウントのログイン</h2>
+    <img src="../WebResources/K-List-Logo.jpg" width="200" alt="K-List"></a></p>
+    <!-- <h1>K-List</h1> -->
+      <h2>ログイン</h2>
       <br>
       <label for="username">ユーザー名 ;</label>
       <input type="text" id="username" name="username" required>

@@ -7,8 +7,8 @@
     <div class="container">
     <p align="center">
       <a href="../index.php" target="">
-        <img src="../WebResources/K-List.png" width="200" alt="K-List"></a></p>
-        <h1 class="home_title">K-List</h1>
+        <img src="../WebResources/K-List-Logo.jpg" width="200" alt="K-List"></a></p>
+        <!-- <h1 class="home_title">K-List</h1> -->
       
         <header>
         <h1>卒業製作発表作品について</h1>

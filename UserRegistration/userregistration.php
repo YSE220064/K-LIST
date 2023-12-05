@@ -6,8 +6,9 @@
     <?php include '../WebComponents/navigation.php'; ?>  
     <div class="container">
     <form id="registrationForm" action="./userregistrationcall.php" method="post">
-    <h1>K-List</h1>
-      <h2>アカウントの作成</h2>
+    <!-- <h1>K-List</h1> -->
+    <img src="../WebResources/K-List-Logo.jpg" width="200" alt="K-List"></a></p>
+      <h2>アカウント　登録</h2>
       <br>
       <label for="username">ユーザー名 ;</label>
       <input type="text" id="username" name="username" required>

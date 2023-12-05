@@ -11,6 +11,7 @@
     <br>
 
     <div class="container">
+        <img src="../WebResources/K-List-Logo.jpg" width="200" alt="K-List"></a></p>
         <h1>アカウント管理
             <br>未定
         </h1>
