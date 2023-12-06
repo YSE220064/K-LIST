@@ -30,7 +30,7 @@ $user_id = $user['id'];
 $sql = "INSERT INTO okaimonolists (user_id, list_name, list_content, creation_datetime) VALUES ($user_id, '$listName', '$listContent', '$creationDateTime')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "List saved to database successfully!";
+    echo "リスト　保存されまして！";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

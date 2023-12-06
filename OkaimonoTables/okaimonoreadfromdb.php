@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         $sql = "INSERT INTO okaimonolists (list_name, list_content, creation_datetime) VALUES ('$listName', '$listContent', '$creationDateTime')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "List saved to database successfully!";
+            echo "リスト　保存されまして！";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         $sql = "DELETE FROM okaimonolists WHERE id=$listId";
 
         if ($conn->query($sql) === TRUE) {
-            echo "List deleted successfully!";
+            echo "リスト　削除されました！";
         } else {
             echo "Error deleting list: " . $conn->error;
         }
