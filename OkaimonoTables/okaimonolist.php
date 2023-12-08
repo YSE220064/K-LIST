@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (empty($_SESSION['user'])) {
-    header('Location: ../UserLogtin/userlogin.phpt');
+    header('Location: ../UserLogin/userlogin.php');
 } else {
     $user = $_SESSION['user'];
 }

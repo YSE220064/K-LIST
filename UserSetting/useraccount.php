@@ -2,17 +2,27 @@
 
 <?php
 session_start();
-
-// Check if the user is logged in
-if (!isset($_SESSION['user_id'])) {
-    header("Location: ../UserLogin/userlogin.php"); // Redirect to login page if not logged in
-    exit();
+if (empty($_SESSION['user'])) {
+    header('Location: ../UserLogin/userlogin.php');
+} else {
+    $user = $_SESSION['user'];
 }
 
-// Dummy user data (replace this with your user data retrieval logic)
-// $userId = $_SESSION['user_id'];
-// $username = "example_user";
-// $email = "user@example.com";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "k-list";
+
+// Function to connect to the database
+function connectDB()
+{
+    global $servername, $username, $password, $dbname;
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    return $conn;
+}
 
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -56,6 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <img src="../WebResources/K-List-Logo.jpg" width="200" alt="K-List"></a></p>
         <h1>User Settings</h1>
 
+        <h2>Username = <?= $user['username'] ?></h2>
     <h2>Change Username</h2>
     <form method="post" action="">
         <label for="new_username">New Username:</label>
@@ -64,6 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
 
     <h2>Change Email</h2>
+    <h2>Email = <?= $user['email'] ?></h2>
     <form method="post" action="">
         <label for="new_email">New Email:</label>
         <input type="email" id="new_email" name="new_email" required>
@@ -71,6 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
 
     <h2>Change Password</h2>
+    <h2>Password = <?= $user['password'] ?></h2>
     <form method="post" action="">
         <label for="new_password">New Password:</label>
         <input type="password" id="new_password" name="new_password" required>
