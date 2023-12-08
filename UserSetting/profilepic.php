@@ -1,4 +1,26 @@
 <?php
+// session_start();
+// if (empty($_SESSION['user'])) {
+//     header('Location: ../UserLogin/userlogin.php');
+// } else {
+//     $user = $_SESSION['user'];
+// }
+
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "k-list";
+
+// // Function to connect to the database
+// function connectDB()
+// {
+//     global $servername, $username, $password, $dbname;
+//     $conn = new mysqli($servername, $username, $password, $dbname);
+//     if ($conn->connect_error) {
+//         die("Connection failed: " . $conn->connect_error);
+//     }
+//     return $conn;
+// }
 
 // Handle profile picture upload
 if (isset($_POST['change_picture'])) {

@@ -96,6 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <label for="profile_picture">Upload New Profile Picture:</label>
     <input type="file" id="profile_picture" name="profile_picture" accept="image/*" required>
     <button type="submit" name="change_picture">Change Profile Picture</button>
+    <?php include "../UserSetting/profilepic.php"; ?>
 </form>
 
     </div>
