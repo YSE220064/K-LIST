@@ -1,11 +1,19 @@
 <?php
+session_start();
+if (empty($_SESSION['user'])) {
+    header('Location: ../UserLogtin/userlogin.phpt');
+} else {
+    $user = $_SESSION['user'];
+}
+
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "k-list";
 
 // Function to connect to the database
-function connectDB() {
+function connectDB()
+{
     global $servername, $username, $password, $dbname;
     $conn = new mysqli($servername, $username, $password, $dbname);
     if ($conn->connect_error) {
@@ -62,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
     $conn = connectDB();
 
-    $sql = "SELECT * FROM okaimonolists";
+    $sql = "SELECT * FROM okaimonolists WHERE user_id = {$user['id']}";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -87,12 +95,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
 
 <body>
 
-    <?php include '../WebComponents/navigation.php'; ?>  
+
+    <?php include '../WebComponents/navigation.php'; ?>
 
     <br>
 
     <div class="container">
-        <h2>リストの一覧</h2>
+        <h2><?= $user['username'] ?>さんの買い物リスト</h2>
         <table id="lists-table" border="1"></table>
     </div>
 
@@ -104,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
         function displayLists() {
             var xhr = new XMLHttpRequest();
             xhr.open("GET", "?displayLists=1", true);
-            xhr.onreadystatechange = function () {
+            xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     var lists = JSON.parse(xhr.responseText);
                     if (lists.length > 0) {
@@ -148,7 +157,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
                 var xhr = new XMLHttpRequest();
                 xhr.open("POST", "", true);
                 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                xhr.onreadystatechange = function () {
+                xhr.onreadystatechange = function() {
                     if (xhr.readyState === 4 && xhr.status === 200) {
                         alert(xhr.responseText);
                         displayLists();
@@ -164,7 +173,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
                 var xhr = new XMLHttpRequest();
                 xhr.open("POST", "", true);
                 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                xhr.onreadystatechange = function () {
+                xhr.onreadystatechange = function() {
                     if (xhr.readyState === 4 && xhr.status === 200) {
                         alert(xhr.responseText);
                         displayLists();
@@ -174,10 +183,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
             }
         }
 
-        window.onload = function () {
+        window.onload = function() {
             displayLists();
         };
     </script>
 
 </body>
+
 </html>
