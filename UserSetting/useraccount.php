@@ -90,6 +90,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit">Change Password</button>
     </form>
         </h1>
+    
+        <h2>Change Profile Picture</h2>
+<form method="post" action="" enctype="multipart/form-data">
+    <label for="profile_picture">Upload New Profile Picture:</label>
+    <input type="file" id="profile_picture" name="profile_picture" accept="image/*" required>
+    <button type="submit" name="change_picture">Change Profile Picture</button>
+</form>
+
     </div>
     <br>
 
