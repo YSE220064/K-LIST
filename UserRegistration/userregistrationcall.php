@@ -13,11 +13,12 @@ if ($conn->connect_error) {
 
 // Get user input
 $username = $_POST['username'];
+$userid = $_POST['username'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password
 $email = $_POST['email'];
 
 // Insert user into the database
-$sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$password', '$email')";
+$sql = "INSERT INTO users (username, password, email, user_id) VALUES ('$username', '$password', '$email', '$userid')";
 
 if ($conn->query($sql) === TRUE) {
     $_SESSION['user'] = $row;
