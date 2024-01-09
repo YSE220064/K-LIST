@@ -144,8 +144,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
                 row.insertCell(2).innerHTML = lists[i].list_content;
                 row.insertCell(3).innerHTML = lists[i].creation_datetime;
                 var actionsCell = row.insertCell(4);
-                actionsCell.innerHTML = '<button onclick="editList(' + lists[i].id + ', \'' + lists[i].list_name + '\', \'' + lists[i].list_content + '\')">修正</button> ' +
-                    '<button onclick="deleteList(' + lists[i].id + ')">削除</button>';
+                // actionsCell.innerHTML = '<button onclick="editList(' + lists[i].id + ', \'' + lists[i].list_name + '\', \'' + lists[i].list_content + '\')">修正</button> ' +
+                //     '<button onclick="deleteList(' + lists[i].id + ')">削除</button>';
+                actionsCell.innerHTML = '<button onclick="deleteList(' + lists[i].id + ')">削除</button>';
             }
         }
 
