@@ -25,16 +25,12 @@ loginCheck();
             </div>
             
             <p align="center">
-            <!-- <button onclick="saveList()">リスト　ダウンロード</button>
+            <button onclick="saveList()">リスト　ダウンロード</button>
             <br>
             <button id="copy-button" onclick="copyLink()">リスト　リンク　コピー</button>
             <br>
             <button onclick="copyLinkAndGenerateQRCode()">QR　コード　作成</button>
-            <button onclick="savetodb()">データーベース　保存</button> -->
-            <button onclick="copyLinkAndGenerateQRCode(); savetodb();">データーベースに保存とQRコードを作成</button>
-            <br>
-            <br>
-            <button onclick="saveList()">リストをダウンロード</button>
+            <button onclick="savetodb()">データーベース　保存</button>
             </p>
 
         </div>
