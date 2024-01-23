@@ -66,30 +66,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <img src="../WebResources/K-List-Logo.jpg" width="200" alt="K-List"></a></p>
         <h1>アカウント管理</h1>
 
-        <h2>ユーザー名は　<?= $user['username'] ?>　です。</h2>
-    <!--<h2>Change Username</h2>
+    <p>
+    <h2>ユーザー名は　<?= $user['username'] ?>　です。</h2>
+    <h2>ユーザー名変更</h2>
     <form method="post" action="">
-        <label for="new_username">New Username:</label>
+        <label for="new_username">新しいユーザー名</label>
         <input type="text" id="new_username" name="new_username" required>
-        <button type="submit">Change Username</button>
-    </form>-->
-
-    <h2>メールアドレスは　<?= $user['email'] ?>　です。</h2>
-    <!--<h2>Change Email</h2>
-    <form method="post" action="">
-        <label for="new_email">New Email:</label>
-        <input type="email" id="new_email" name="new_email" required>
-        <button type="submit">Change Email</button>
-    </form>-->
-
-    <h2>パスワードは　<?= $user['password'] ?>　です。</h2>
-    <!--<h2>Change Password</h2>
-    <form method="post" action="">
-        <label for="new_password">New Password:</label>
-        <input type="password" id="new_password" name="new_password" required>
-        <button type="submit">Change Password</button>
+        <button type="submit">変更</button>
     </form>
-        </h1>-->
+    </p>
+
+    <p>
+    <h2>メールアドレスは　<?= $user['email'] ?>　です。</h2>
+    <h2>メールアドレス変更</h2>
+    <form method="post" action="">
+        <label for="new_email">新しいメールアドレス</label>
+        <input type="email" id="new_email" name="new_email" required>
+        <button type="submit">変更</button>
+    </form>
+    </p>
+
+    <p>
+    <h2>パスワードは　<?= $user['password'] ?>　です。</h2>
+    <h2>パスワード変更</h2>
+    <form method="post" action="">
+        <label for="new_password">新しいパスワード</label>
+        <input type="password" id="new_password" name="new_password" required>
+        <button type="submit">変更</button>
+    </form>
+    </p>
     
     <!--<h2>Change Profile Picture</h2>
 <form method="post" action="" enctype="multipart/form-data">
