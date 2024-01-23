@@ -101,7 +101,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
     <br>
 
     <div class="container">
-        <h2><?= $user['username'] ?>さんの買い物リスト</h2>
+        <img src="../WebResources/K-List-Logo.jpg" width="200" alt="K-List"></a></p>
+        <h2><?= $user['username'] ?>　さんの買い物リスト</h2>
         <table id="lists-table" border="1"></table>
     </div>
 
@@ -131,7 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
             table.innerHTML = "";
 
             var headerRow = table.insertRow(0);
-            var headers = ["号", "名", "中身", "いつ", "何を"];
+            var headers = ["番号", "リスト名", "中身", "作成時", "何を"];
             for (var i = 0; i < headers.length; i++) {
                 var cell = headerRow.insertCell(i);
                 cell.innerHTML = headers[i];
@@ -146,7 +147,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
                 var actionsCell = row.insertCell(4);
                 // actionsCell.innerHTML = '<button onclick="editList(' + lists[i].id + ', \'' + lists[i].list_name + '\', \'' + lists[i].list_content + '\')">修正</button> ' +
                 //     '<button onclick="deleteList(' + lists[i].id + ')">削除</button>';
-                actionsCell.innerHTML = '<button onclick="deleteList(' + lists[i].id + ')">削除</button>';
+                actionsCell.innerHTML ='<button onclick="deleteList(' + lists[i].id + ')">削除</button>';
             }
         }
 
@@ -169,7 +170,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
         }
 
         function deleteList(id) {
-            var confirmDelete = confirm("Are you sure you want to delete this list?");
+            var confirmDelete = confirm("本当に削除してもいいの？");
             if (confirmDelete) {
                 var xhr = new XMLHttpRequest();
                 xhr.open("POST", "", true);

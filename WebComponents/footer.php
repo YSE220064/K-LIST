@@ -11,7 +11,7 @@
         <div class="footer-section">
             <h4>YSE 横浜システム工学院専門学校</h4>
             <ul>
-                <li>IT・ゲームソフト科</li>
+                <li>IT・ゲームソフト科　2年　1組</li>
             </ul>
         </div>
 
@@ -19,15 +19,15 @@
             <h4>GG IZY TEAM</h4>
             <ul>
                 <li>伊藤　勝志</li>
-                <li>バトトゥムルアリウンザヤ</li>
-                <li>モハッマドワヒュブディムルヤ</li>
+                <li>バトトゥムル　アリウンザヤ</li>
+                <li>モハッマド　ワヒュ　ブディ　ムルヤ</li>
             </ul>
         </div>
 
         <div class="footer-section">
             <h4>お問い合わせ</h4>
             <ul>
-                <li>連絡しないで！</li>
+                <li>ー</li>
             </ul>
         </div>
     </div>

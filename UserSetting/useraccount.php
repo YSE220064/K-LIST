@@ -64,40 +64,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div class="container">
         <img src="../WebResources/K-List-Logo.jpg" width="200" alt="K-List"></a></p>
-        <h1>User Settings</h1>
+        <h1>アカウント管理</h1>
 
-        <h2>Username = <?= $user['username'] ?></h2>
-    <h2>Change Username</h2>
+        <h2>ユーザー名は　<?= $user['username'] ?>　です。</h2>
+    <!--<h2>Change Username</h2>
     <form method="post" action="">
         <label for="new_username">New Username:</label>
         <input type="text" id="new_username" name="new_username" required>
         <button type="submit">Change Username</button>
-    </form>
+    </form>-->
 
-    <h2>Change Email</h2>
-    <h2>Email = <?= $user['email'] ?></h2>
+    <h2>メールアドレスは　<?= $user['email'] ?>　です。</h2>
+    <!--<h2>Change Email</h2>
     <form method="post" action="">
         <label for="new_email">New Email:</label>
         <input type="email" id="new_email" name="new_email" required>
         <button type="submit">Change Email</button>
-    </form>
+    </form>-->
 
-    <h2>Change Password</h2>
-    <h2>Password = <?= $user['password'] ?></h2>
+    <h2>パスワードは　<?= $user['password'] ?>　です。</h2>
+    <!--<h2>Change Password</h2>
     <form method="post" action="">
         <label for="new_password">New Password:</label>
         <input type="password" id="new_password" name="new_password" required>
         <button type="submit">Change Password</button>
     </form>
-        </h1>
+        </h1>-->
     
-        <h2>Change Profile Picture</h2>
+    <!--<h2>Change Profile Picture</h2>
 <form method="post" action="" enctype="multipart/form-data">
     <label for="profile_picture">Upload New Profile Picture:</label>
     <input type="file" id="profile_picture" name="profile_picture" accept="image/*" required>
     <button type="submit" name="change_picture">Change Profile Picture</button>
     <?php include "../UserSetting/profilepic.php"; ?>
-</form>
+</form>-->
 
     </div>
     <br>

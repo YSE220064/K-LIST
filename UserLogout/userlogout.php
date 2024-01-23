@@ -1,13 +1,20 @@
 <!-- userlogout.php -->
 <?php
 // Start the session
-session_start();
+// session_start();
 
 // Check if the user is logged in
-if (!isset($_SESSION['user'])) {
-    // Redirect to the login page if the user is not logged in
-    header("Location: ../UserLogin/userlogin.php");
-    exit;
+// if (!isset($_SESSION['user'])) {
+//     // Redirect to the login page if the user is not logged in
+//     header("Location: ../UserLogin/userlogin.php");
+//     exit;
+// }
+
+session_start();
+if (empty($_SESSION['user'])) {
+    header('Location: ../UserLogin/userlogin.php');
+} else {
+    $user = $_SESSION['user'];
 }
 
 // Handle logout
@@ -38,8 +45,8 @@ if (isset($_POST['logout'])) {
     <div class="container">
         <img src="../WebResources/K-List-Logo.jpg" width="200" alt="K-List"></a></p>
         <header>
-        <h1>さようなら！
-        <!-- <h1>さようなら！<?php echo $_SESSION['user']; ?></h1> -->
+        <h1>さようなら！ <?php echo $_SESSION['username']; ?></h1>
+        <h2><?= $user['username'] ?>　さん</h2>
     </header>
 
     <!-- <section>
@@ -48,7 +55,7 @@ if (isset($_POST['logout'])) {
     </section> -->
 
     <form method="post">
-        <input type="submit" name="logout" value="Logout">
+        <input type="submit" name="logout" value="逃げるんだよ！">
     </form>
     </div>
     <br>
