@@ -45,7 +45,8 @@ if (isset($_POST['logout'])) {
     <div class="container">
         <img src="../WebResources/K-List-Logo.jpg" width="200" alt="K-List"></a></p>
         <header>
-        <h1>さようなら！ <?php echo $_SESSION['username']; ?></h1>
+        <!-- <h1>さようなら！ <?php echo $_SESSION['username']; ?></h1> -->
+        <h1>さようなら！</h1>
         <h2><?= $user['username'] ?>　さん</h2>
     </header>
 
