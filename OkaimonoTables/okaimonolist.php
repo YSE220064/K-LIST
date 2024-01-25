@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         $sql = "DELETE FROM okaimonolists WHERE id=$listId";
 
         if ($conn->query($sql) === TRUE) {
-            echo "List deleted successfully!";
+            echo "リストが削除されました！";
         } else {
             echo "Error deleting list: " . $conn->error;
         }
@@ -132,7 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
             table.innerHTML = "";
 
             var headerRow = table.insertRow(0);
-            var headers = ["番号", "リスト名", "中身", "作成時", "何を"];
+            var headers = ["番号", "ユーザー名", "リスト名", "中身", "作成時", "何を"];
             for (var i = 0; i < headers.length; i++) {
                 var cell = headerRow.insertCell(i);
                 cell.innerHTML = headers[i];
@@ -140,11 +140,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
 
             for (var i = 0; i < lists.length; i++) {
                 var row = table.insertRow(i + 1);
-                row.insertCell(0).innerHTML = lists[i].id;
-                row.insertCell(1).innerHTML = lists[i].list_name;
-                row.insertCell(2).innerHTML = lists[i].list_content;
-                row.insertCell(3).innerHTML = lists[i].creation_datetime;
-                var actionsCell = row.insertCell(4);
+                row.insertCell(0).innerHTML = lists[i].user_id;
+                row.insertCell(1).innerHTML = lists[i].username;
+                row.insertCell(2).innerHTML = lists[i].list_name;
+                row.insertCell(3).innerHTML = lists[i].list_content;
+                row.insertCell(4).innerHTML = lists[i].creation_datetime;
+                var actionsCell = row.insertCell(5);
                 // actionsCell.innerHTML = '<button onclick="editList(' + lists[i].id + ', \'' + lists[i].list_name + '\', \'' + lists[i].list_content + '\')">修正</button> ' +
                 //     '<button onclick="deleteList(' + lists[i].id + ')">削除</button>';
                 actionsCell.innerHTML ='<button onclick="deleteList(' + lists[i].id + ')">削除</button>';

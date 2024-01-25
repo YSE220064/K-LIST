@@ -27,7 +27,8 @@ $listContent = $_POST['listContent'];
 $creationDateTime = date('Y-m-d H:i:s');
 
 $user_id = $user['id'];
-$sql = "INSERT INTO okaimonolists (user_id, list_name, list_content, creation_datetime) VALUES ('$user_id', '$listName', '$listContent', '$creationDateTime')";
+$username = $user['username'];
+$sql = "INSERT INTO okaimonolists (username, user_id, list_name, list_content, creation_datetime) VALUES ('$username', '$user_id', '$listName', '$listContent', '$creationDateTime')";
 
 if ($conn->query($sql) === TRUE) {
     echo "リスト　保存されましたよ！";

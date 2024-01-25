@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         $sql = "INSERT INTO okaimonolists (list_name, list_content, creation_datetime) VALUES ('$listName', '$listContent', '$creationDateTime')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "リスト　保存されまして！";
+            echo "リスト　保存されました！";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
