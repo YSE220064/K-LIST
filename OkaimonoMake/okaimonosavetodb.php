@@ -27,7 +27,7 @@ $listContent = $_POST['listContent'];
 $creationDateTime = date('Y-m-d H:i:s');
 
 $user_id = $user['id'];
-$username = $user['username'];
+$username = $user['user_id'];
 $sql = "INSERT INTO okaimonolists (username, user_id, list_name, list_content, creation_datetime) VALUES ('$username', '$user_id', '$listName', '$listContent', '$creationDateTime')";
 
 if ($conn->query($sql) === TRUE) {
