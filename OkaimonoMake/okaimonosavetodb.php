@@ -26,11 +26,11 @@ $listName = $_POST['listName'];
 $listContent = $_POST['listContent'];
 $creationDateTime = date('Y-m-d H:i:s');
 
-$user_id = $user['id'];
-$sql = "INSERT INTO okaimonolists (user_id, list_name, list_content, creation_datetime) VALUES ($user_id, '$listName', '$listContent', '$creationDateTime')";
+$user_id = $user['user_id'];
+$sql = "INSERT INTO okaimonolists (user_id, list_name, list_content, creation_datetime) VALUES ('$user_id', '$listName', '$listContent', '$creationDateTime')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "リスト　保存されまして！";
+    echo "リスト　保存されましたよ！";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
