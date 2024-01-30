@@ -140,7 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['displayLists'])) {
 
             for (var i = 0; i < lists.length; i++) {
                 var row = table.insertRow(i + 1);
-                row.insertCell(0).innerHTML = lists[i].user_id;
+                row.insertCell(0).innerHTML = lists[i].id;
                 row.insertCell(1).innerHTML = lists[i].username;
                 row.insertCell(2).innerHTML = lists[i].list_name;
                 row.insertCell(3).innerHTML = lists[i].list_content;
